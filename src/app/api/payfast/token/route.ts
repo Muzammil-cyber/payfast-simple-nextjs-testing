@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: NextRequest) {
+export async function POST() {
   const merchantId = process.env.PAYFAST_MERCHANT_ID!;
   const securedKey = process.env.PAYFAST_SECURED_KEY!;
   const basketId = "ITEM-001";
@@ -34,6 +34,6 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "No token received" }, { status: 400 });
     }
   } catch (error) {
-    return NextResponse.json({ error: "Server error" }, { status: 500 });
+    return NextResponse.json({ error }, { status: 500 });
   }
 }
