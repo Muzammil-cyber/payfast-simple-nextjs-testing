@@ -73,7 +73,7 @@ export default class PayFast {
         TOKEN: token,
         SUCCESS_URL: `${this.baseUrl}/payfast/success`,
         FAILURE_URL: `${this.baseUrl}/payfast/failure`,
-        CHECKOUT_URL: `${this.baseUrl}/payfast/checkout`,
+        CHECKOUT_URL: `${this.baseUrl}/payfast`,
         CUSTOMER_EMAIL_ADDRESS: details.email,
         CUSTOMER_MOBILE_NO: details.mobile,
         TXNAMT: details.txnAmount.toString(),
