@@ -39,61 +39,6 @@ export default function PayFastFormPage() {
     } finally {
       setLoading(false);
     }
-
-    // const txnData = {
-    //   email,
-    //   mobile,
-    //   basketId: "ITEM-001",
-    //   txnAmount: "100",
-    //   token,
-    //   orderDate,
-    // };
-
-    // const res = await fetch("/api/payfast/log", {
-    //   method: "POST",
-    //   body: JSON.stringify(txnData),
-    // });
-
-    // if (!res.ok) return setError("Failed to log transaction");
-
-    // // Submit to PayFast
-    // const form = document.createElement("form");
-    // form.method = "POST";
-    // form.action =
-    //   "https://ipguat.apps.net.pk/Ecommerce/api/Transaction/PostTransaction";
-
-    // const fields = {
-    //   CURRENCY_CODE: "PKR",
-    //   MERCHANT_ID: "102",
-    //   MERCHANT_NAME: "UAT Demo Merchant",
-    //   TOKEN: token,
-    //   SUCCESS_URL: "http://localhost:3000/payfast/success",
-    //   FAILURE_URL: "http://localhost:3000/payfast/failure",
-    //   CHECKOUT_URL: "http://localhost:3000/payfast",
-    //   CUSTOMER_EMAIL_ADDRESS: email,
-    //   CUSTOMER_MOBILE_NO: mobile,
-    //   TXNAMT: "100",
-    //   BASKET_ID: "ITEM-001",
-    //   ORDER_DATE: orderDate,
-    //   SIGNATURE: "SOMERANDOM-STRING",
-    //   VERSION: "MERCHANTCART-0.1",
-    //   TXNDESC: "Item Purchased from Cart",
-    //   PROCCODE: "00",
-    //   TRAN_TYPE: "ECOMM_PURCHASE",
-    //   STORE_ID: "102-ZEOJDZS3V",
-    //   RECURRING_TXN: "FALSE",
-    // };
-
-    // Object.entries(fields).forEach(([key, val]) => {
-    //   const input = document.createElement("input");
-    //   input.type = "hidden";
-    //   input.name = key;
-    //   input.value = val;
-    //   form.appendChild(input);
-    // });
-
-    // document.body.appendChild(form);
-    // form.submit();
   };
 
   return (
