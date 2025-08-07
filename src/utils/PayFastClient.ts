@@ -11,10 +11,9 @@ export default class PayFast {
   private readonly securedKey = process.env.PAYFAST_SECURED_KEY!;
   private readonly apiUrl =
     "https://ipguat.apps.net.pk/Ecommerce/api/Transaction";
-  private readonly baseUrl =
-    process.env.NEXT_PUBLIC_URL || process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "http://localhost:5000/";
+  private readonly baseUrl = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : process.env.NEXT_PUBLIC_URL ?? "http://localhost:3000";
   private merchantName: string;
   private storeId: string;
 
@@ -74,7 +73,7 @@ export default class PayFast {
         TOKEN: token,
         SUCCESS_URL: `${this.baseUrl}/payfast/success`,
         FAILURE_URL: `${this.baseUrl}/payfast/failure`,
-        CHECKOUT_URL: `${this.baseUrl}payfast`,
+        CHECKOUT_URL: `${this.baseUrl}/payfast/checkout`,
         CUSTOMER_EMAIL_ADDRESS: details.email,
         CUSTOMER_MOBILE_NO: details.mobile,
         TXNAMT: details.txnAmount.toString(),

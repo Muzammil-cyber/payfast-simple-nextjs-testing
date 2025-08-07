@@ -1,10 +1,10 @@
-export default function RedirectToPayFast({
+export default async function RedirectToPayFast({
   searchParams,
 }: {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   searchParams: any;
 }) {
-  const fields = JSON.parse(decodeURIComponent(searchParams.fields));
+  const fields = JSON.parse(decodeURIComponent(await searchParams.fields));
 
   return (
     <html>

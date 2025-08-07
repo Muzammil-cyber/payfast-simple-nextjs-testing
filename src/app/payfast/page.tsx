@@ -100,7 +100,10 @@ export default function PayFastFormPage() {
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="bg-white shadow-xl rounded-xl p-8 max-w-md w-full">
         <h1 className="text-2xl font-semibold text-gray-800 mb-6">
-          PayFast Checkout
+          PayFast Checkout{" "}
+          {process.env.VERCEL_URL
+            ? `https://${process.env.VERCEL_URL}`
+            : process.env.NEXT_PUBLIC_URL ?? "http://localhost:3000"}
         </h1>
 
         {error && <p className="text-red-600 mb-4">{error}</p>}
