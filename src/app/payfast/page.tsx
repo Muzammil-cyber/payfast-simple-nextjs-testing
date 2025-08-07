@@ -30,7 +30,7 @@ export default function PayFastFormPage() {
         email,
         mobile,
         txnAmount: 100,
-        basketId: "DEMO_1234",
+        basketId: "ITEM-001",
       });
 
       window.location.href = url;
